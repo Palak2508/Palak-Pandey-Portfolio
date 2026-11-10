@@ -66,8 +66,8 @@ export const PORTFOLIO_DATA = {
     degree: "B.Tech, Information Technology Engineering (AI/ML Focus)",
     cgpa: "8.6 / 10",
     status: "Open to SDE / Data Analyst / ML Engineering Roles & Internships",
-    resumePdfPath: "/assets/aistudio/Palak_All_7dc9a8f6.pdf",
-    photoPath: "/assets/aistudio/palak_portfolio_74d0ad2d.jpg",
+    resumePdfPath: `${import.meta.env.BASE_URL}assets/aistudio/Palak_All_7dc9a8f6.pdf`,
+    photoPath: `${import.meta.env.BASE_URL}assets/aistudio/palak_portfolio_74d0ad2d.jpg`,
     roles: [
       "Software Developer",
       "Machine Learning & AI Builder",
