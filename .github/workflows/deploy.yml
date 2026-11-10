@@ -31,6 +31,13 @@ jobs:
       - name: Build portfolio
         run: bun run build
 
+      - name: Verify production output
+        run: |
+          echo "=== DIST FILES ==="
+          find dist -maxdepth 2 -type f
+          echo "=== BUILT INDEX ==="
+          cat dist/index.html
+
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:
