@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  body {
+    background-color: #080B1E;
+    color: #F8FAFF;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Poppins', sans-serif;
+  }
+}
+
+/* Custom scrollbar matching midnight navy + neon cyan theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080B1E;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #713BFF, #16D9F5);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #FF4FA3, #16D9F5);
+}
+
+/* Neon Glow & Aurora animations */
+@keyframes auroraPulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.1) translate(15px, -10px);
+  }
+}
+
+.aurora-glow-1 {
+  animation: auroraPulse 8s ease-in-out infinite;
+}
+
+.aurora-glow-2 {
+  animation: auroraPulse 10s ease-in-out infinite reverse;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(16, 21, 45, 0.75);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(113, 59, 255, 0.22);
+}
+
+.glass-panel:hover {
+  border-color: rgba(22, 217, 245, 0.45);
+  box-shadow: 0 10px 30px -10px rgba(113, 59, 255, 0.35);
+}
+
+/* Card hover lift effect */
+.skill-card-lift {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+.skill-card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px -5px rgba(22, 217, 245, 0.3);
+  border-color: #16D9F5;
+}
