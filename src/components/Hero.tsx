@@ -154,7 +154,7 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadResume }) => {
               <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-[#713BFF]/60 p-1 bg-[#10152D] shadow-[0_10px_30px_rgba(8,11,30,0.8)] ring-1 ring-[#16D9F5]/40 transition-all duration-300 group-hover:border-[#16D9F5]/70">
                 <div className="w-full h-full rounded-full overflow-hidden bg-[#080B1E]">
                   <img
-                    src={PORTFOLIO_DATA.personal.photoPath}
+                   src={`${import.meta.env.BASE_URL}assets/aistudio/palak_portfolio_74d0ad2d.jpg`}
                     alt="Palak Pandey"
                     className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500 filter contrast-[1.02]"
                     loading="eager"
